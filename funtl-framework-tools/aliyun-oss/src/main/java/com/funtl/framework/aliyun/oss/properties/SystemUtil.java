@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package funtl.funtlframework.aliyun.oss.properties;
+package com.funtl.framework.aliyun.oss.properties;
 
 import java.util.Properties;
 

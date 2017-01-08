@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package funtl.funtlframework.aliyun.oss;
+package com.funtl.framework.aliyun.oss;
 
-import funtl.funtlframework.aliyun.oss.properties.OSSClientProperties;
+import com.funtl.framework.aliyun.oss.properties.OSSClientProperties;
 
 import com.aliyun.oss.OSSClient;
 

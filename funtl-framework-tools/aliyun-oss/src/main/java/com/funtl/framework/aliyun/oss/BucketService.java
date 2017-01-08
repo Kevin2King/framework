@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package funtl.funtlframework.aliyun.oss;
+package com.funtl.framework.aliyun.oss;
 
 import java.util.List;
 
