@@ -67,6 +67,7 @@
                 <module>funtl-framework-dependencies</module>
                 <module>funtl-framework-parent</module>
                 <module>funtl-framework-core</module>
+                <module>funtl-framework-tools</module>
             </modules>
         </profile>
     </profiles>
