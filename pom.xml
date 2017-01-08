@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+	
+    <groupId>com.funtlframework</groupId>
+    <artifactId>funtl-framework-build</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+	
+    <name>funtl-framework-build</name>
+    <description>Funtl Framework Build</description>
+    <url>http://projects.funtl.com/funtl-framework/</url>
+
+    <organization>
+        <name>深圳市鲁斯菲尔科技有限公司</name>
+        <url>http://www.funtl.com</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/funtl/framework</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>lusifer</id>
+            <name>Lusifer</name>
+            <email>lusifer at tssup.com</email>
+            <organization>深圳市鲁斯菲尔科技有限公司</organization>
+            <organizationUrl>http://www.funtl.com</organizationUrl>
+            <roles>
+                <role>CEO</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <properties>
+        <main.basedir>${basedir}</main.basedir>
+    </properties>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Nexus Snapshot</name>
+            <url>http://172.16.7.240:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus</id>
+            <name>Nexus Releases</name>
+            <url>http://172.16.7.240:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
+
+    <profiles>
+        <profile>
+            <id>default</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <modules>
+                <module>funtl-framework-dependencies</module>
+                <module>funtl-framework-parent</module>
+                <module>funtl-framework-core</module>
+            </modules>
+        </profile>
+    </profiles>
+</project>
