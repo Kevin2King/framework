@@ -4,14 +4,12 @@
 
     <parent>
         <groupId>com.funtlframework</groupId>
-        <artifactId>funtl-framework-parent</artifactId>
+        <artifactId>funtl-framework-tools</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../funtl-framework-parent</relativePath>
     </parent>
 
-    <artifactId>funtl-framework-tools</artifactId>
-    <packaging>pom</packaging>
-    <name>funtl-framework-tools</name>
+    <artifactId>funtl-framework-tools-aliyun-oss</artifactId>
+    <name>funtl-framework-tools/aliyun-oss</name>
     <description>Funtl Framework Tools</description>
     <url>http://projects.funtl.com/funtl-framework/</url>
     <organization>
@@ -20,11 +18,17 @@
     </organization>
 
     <properties>
-        <main.basedir>${basedir}/..</main.basedir>
+        <main.basedir>${basedir}/../..</main.basedir>
     </properties>
 
-    <modules>
-        <module>alipay-sdk</module>
-        <module>aliyun-oss</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+        </dependency>
+    </dependencies>
 </project>
