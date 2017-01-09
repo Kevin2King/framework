@@ -29,5 +29,6 @@
         <module>amqp-rabbit</module>
         <module>apache-httpclient</module>
         <module>apache-shiro</module>
+        <module>baidu-ueditor</module>
     </modules>
 </project>
