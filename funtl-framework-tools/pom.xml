@@ -27,5 +27,6 @@
         <module>alipay-sdk</module>
         <module>aliyun-oss</module>
         <module>amqp-rabbit</module>
+        <module>apache-httpclient</module>
     </modules>
 </project>
