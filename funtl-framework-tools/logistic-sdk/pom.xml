@@ -4,14 +4,12 @@
 
     <parent>
         <groupId>com.funtlframework</groupId>
-        <artifactId>funtl-framework-parent</artifactId>
+        <artifactId>funtl-framework-tools</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../funtl-framework-parent</relativePath>
     </parent>
 
-    <artifactId>funtl-framework-tools</artifactId>
-    <packaging>pom</packaging>
-    <name>funtl-framework-tools</name>
+    <artifactId>funtl-framework-tools-logistic-sdk</artifactId>
+    <name>funtl-framework-tools/logistic-sdk</name>
     <description>Funtl Framework Tools</description>
     <url>http://projects.funtl.com/funtl-framework/</url>
     <organization>
@@ -20,16 +18,7 @@
     </organization>
 
     <properties>
-        <main.basedir>${basedir}/..</main.basedir>
+        <main.basedir>${basedir}/../..</main.basedir>
     </properties>
 
-    <modules>
-        <module>alipay-sdk</module>
-        <module>aliyun-oss</module>
-        <module>amqp-rabbit</module>
-        <module>apache-httpclient</module>
-        <module>apache-shiro</module>
-        <module>baidu-ueditor</module>
-        <module>logistic-sdk</module>
-    </modules>
 </project>
