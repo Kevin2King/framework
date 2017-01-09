@@ -4,14 +4,12 @@
 
     <parent>
         <groupId>com.funtlframework</groupId>
-        <artifactId>funtl-framework-parent</artifactId>
+        <artifactId>funtl-framework-tools</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../funtl-framework-parent</relativePath>
     </parent>
 
-    <artifactId>funtl-framework-tools</artifactId>
-    <packaging>pom</packaging>
-    <name>funtl-framework-tools</name>
+    <artifactId>funtl-framework-tools-paypal-sdk</artifactId>
+    <name>funtl-framework-tools/paypal-sdk</name>
     <description>Funtl Framework Tools</description>
     <url>http://projects.funtl.com/funtl-framework/</url>
     <organization>
@@ -20,17 +18,21 @@
     </organization>
 
     <properties>
-        <main.basedir>${basedir}/..</main.basedir>
+        <main.basedir>${basedir}/../..</main.basedir>
     </properties>
 
-    <modules>
-        <module>alipay-sdk</module>
-        <module>aliyun-oss</module>
-        <module>amqp-rabbit</module>
-        <module>apache-httpclient</module>
-        <module>apache-shiro</module>
-        <module>baidu-ueditor</module>
-        <module>logistic-sdk</module>
-        <module>paypal-sdk</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+        </dependency>
+    </dependencies>
 </project>
