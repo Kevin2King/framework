@@ -28,5 +28,6 @@
         <module>aliyun-oss</module>
         <module>amqp-rabbit</module>
         <module>apache-httpclient</module>
+        <module>apache-shiro</module>
     </modules>
 </project>
