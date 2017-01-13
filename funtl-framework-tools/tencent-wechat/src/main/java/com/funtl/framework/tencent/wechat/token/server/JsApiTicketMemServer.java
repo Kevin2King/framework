@@ -1,0 +1,77 @@
+/*
+ * Copyright 2015-2017 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.funtl.framework.tencent.wechat.token.server;
+
+import com.funtl.framework.tencent.wechat.token.Ticket;
+import com.funtl.framework.tencent.wechat.token.TicketType;
+
+/**
+ * 内存控制单例
+ *
+ * @author ChengNing
+ * @date 2015年1月29日
+ */
+public class JsApiTicketMemServer implements IServer {
+
+	private static JsApiTicketMemServer ticketServer = new JsApiTicketMemServer();
+
+	private Ticket jsApiTicket = new Ticket(TicketType.jsapi);
+
+	private int requestTimes = 1;//token请求失败后重新请求的次数
+
+	/**
+	 * 私有构造
+	 */
+	private JsApiTicketMemServer() {
+		//获取新的token
+		refresh();
+	}
+
+	/**
+	 * token中控服务器实例
+	 *
+	 * @return ticket服务器实例
+	 */
+	public static JsApiTicketMemServer instance() {
+		return ticketServer;
+	}
+
+
+	/**
+	 * 通过中控服务器得到accessToken
+	 *
+	 * @return
+	 */
+	public String token() {
+		//没有可用的token，则去刷新
+		if (!this.jsApiTicket.isValid()) {
+			refresh();
+		}
+		return this.jsApiTicket.getToken();
+	}
+
+	/**
+	 * 服务器刷新token
+	 */
+	private void refresh() {
+		for (int i = 0; i < requestTimes; i++) {
+			//请求成功则退出
+			if (this.jsApiTicket.request()) break;
+		}
+	}
+
+}
