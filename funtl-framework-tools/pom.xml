@@ -32,5 +32,6 @@
         <module>baidu-ueditor</module>
         <module>logistic-sdk</module>
         <module>paypal-sdk</module>
+        <module>rpc-thrift</module>
     </modules>
 </project>
