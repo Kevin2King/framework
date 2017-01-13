@@ -33,5 +33,7 @@
         <module>logistic-sdk</module>
         <module>paypal-sdk</module>
         <module>rpc-thrift</module>
+        <module>share-sdk</module>
+        <module>tencent-wechat</module>
     </modules>
 </project>

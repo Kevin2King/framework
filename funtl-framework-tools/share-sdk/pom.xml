@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.funtlframework</groupId>
+        <artifactId>funtl-framework-tools</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>funtl-framework-tools-share-sdk</artifactId>
+    <name>funtl-framework-tools/share-sdk</name>
+    <description>Funtl Framework Tools</description>
+    <url>http://projects.funtl.com/funtl-framework/</url>
+    <organization>
+        <name>深圳市鲁斯菲尔科技有限公司</name>
+        <url>http://www.funtl.com</url>
+    </organization>
+
+    <properties>
+        <main.basedir>${basedir}/../..</main.basedir>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.funtlframework</groupId>
+            <artifactId>funtl-framework-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.qq</groupId>
+            <artifactId>com-qq-Sdk4J</artifactId>
+        </dependency>
+    </dependencies>
+</project>
